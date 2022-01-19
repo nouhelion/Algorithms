@@ -5,14 +5,27 @@
 //The only input line contains a string of n characters.
 //Output
 //Print one integer: the length of the longest repetition.
+//Input:
+//ATTCGGGA
+//Output:
+//3
 
 #include <iostream>
 #include <vector>
 #include<algorithm>
 using namespace std;
 int Repetitions(string DNA){
-  int n;
+  int n,max=0;
+  char rep;
        for(int i=0;i<DNA.length();i++){
+           rep=DNA[i];
+          for(int j=i+1;j<DNA.length();j++){
+              if(DNA[i]==DNA[j])
+              {   
+                  n++;
+              }
+             
+          }
           
        }  
   return n;
@@ -21,7 +34,6 @@ int Repetitions(string DNA){
 int main()
 {
     string DNA;
-    cout << "enter a string : " <<endl;
     getline(cin,DNA);
     cout <<Repetitions(DNA)<<endl;
 }

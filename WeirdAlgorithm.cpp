@@ -33,7 +33,6 @@ int main()
 {
     vector <int> list;
     int number;
-    cout << "enter a integer : " <<endl;
     cin>>number;
       for (int i = 0; i < weirdAlgorithm(number).size(); i++) 
         cout << "->" << weirdAlgorithm(number)[i] ; 

@@ -28,7 +28,6 @@ int main()
 {
     int size,number;
     vector <int> list;
-    cout << "enter a integer : " <<endl;
     cin  >> size;
     for(int i = 0; i < size-1; i++){
         cin  >>number;
