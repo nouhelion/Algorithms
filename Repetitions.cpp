@@ -12,7 +12,9 @@
 using namespace std;
 int Repetitions(string DNA){
   int n;
-         
+       for(int i=0;i<DNA.length();i++){
+          
+       }  
   return n;
 }
 
@@ -21,6 +23,5 @@ int main()
     string DNA;
     cout << "enter a string : " <<endl;
     getline(cin,DNA);
-    
     cout <<Repetitions(DNA)<<endl;
 }
