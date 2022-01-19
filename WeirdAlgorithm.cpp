@@ -7,6 +7,7 @@
 //Your task is to simulate the execution of the algorithm for a given value of n.
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
