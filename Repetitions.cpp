@@ -17,20 +17,18 @@ int main()
 {
     string DNA;
     getline(cin,DNA);
-    int n,max,best;
-  n=max=1;
-  best=max;
-       for(int i=1;i<DNA.length();i++){
-              if(DNA[i]==DNA[i-1])  
-                  n++;
-              else 
-                 { 
-                     n=1;
-                     if(n>max)
-                       best=n;
-        
-                 }
-            
-       } 
+    int n,best;
+    n=best=1;
+    for(int i=0;i<DNA.length();i++)
+    {
+        if(DNA[i]==DNA[i+1])  
+            n++;
+        else
+        {
+            if(n>best)
+                best=n;
+            n=1;
+        }
+    }
     cout <<best<<endl;
 }
