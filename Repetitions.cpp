@@ -13,8 +13,11 @@
 #include <iostream>
 #include<algorithm>
 using namespace std;
-int Repetitions(string DNA){
-  int n,max,best;
+int main()
+{
+    string DNA;
+    getline(cin,DNA);
+    int n,max,best;
   n=max=1;
   best=max;
        for(int i=1;i<DNA.length();i++){
@@ -29,12 +32,5 @@ int Repetitions(string DNA){
                  }
             
        } 
-  return best;
-}
-
-int main()
-{
-    string DNA;
-    getline(cin,DNA);
-    cout <<Repetitions(DNA)<<endl;
+    cout <<best<<endl;
 }

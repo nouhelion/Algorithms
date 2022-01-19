@@ -9,32 +9,24 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-vector <int> weirdAlgorithm(int number){
-  vector <int> list;
-  list.push_back(number);
-  while(number!=1)
+int main()
+{
+    long long  number;
+    cin>>number;
+    cout<<number<<" ";
+   while(number!=1)
   {
     if(number%2==0){
         //checking if even
         number=number/2;
-        list.push_back(number);
+        
     }
     else
     {
         //checking if odd
         number=(number*3)+1;
-        list.push_back(number);
+        
     } 
+    cout<<number<<" ";
   }
-  return list;
-}
-
-int main()
-{
-    vector <int> list;
-    int number;
-    cout << "enter a integer : " <<endl;
-    cin>>number;
-      for (int i = 0; i < weirdAlgorithm(number).size(); i++) 
-        cout << weirdAlgorithm(number)[i]<< " "  ; 
 }

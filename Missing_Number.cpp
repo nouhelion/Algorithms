@@ -14,25 +14,23 @@
 #include <vector>
 #include<algorithm>
 using namespace std;
-int MissingNumber(int number,vector <int> list){
-  int n;
-         sort(list.begin(), list.end());    
-  for(int i = 1; i<list.size()-1; i++){
-       if(list[i]+1!=list[i+1])
-        n=list[i]+1;
-  }  
-  return n;
-}
+
 
 int main()
 {
-    int size,number;
-    vector <int> list;
-    cout << "enter a integer : " <<endl;
+    int size;
+    long long number;
+    vector <long long> list;
     cin  >> size;
     for(int i = 0; i < size-1; i++){
         cin  >>number;
          list.push_back(number);
     }
-    cout <<MissingNumber(size,list)<<endl;
+    long long n;
+         sort(list.begin(), list.end());    
+  for(int i = 1; i<list.size()-1; i++){
+       if(list[i]+1!=list[i+1])
+        n=list[i]+1;
+  }  
+    cout <<n<<endl;
 }
