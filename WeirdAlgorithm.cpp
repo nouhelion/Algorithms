@@ -7,8 +7,8 @@
 //Your task is to simulate the execution of the algorithm for a given value of n.
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World" << std::endl;
+    cout << "Hello World" <<endl;
 }
