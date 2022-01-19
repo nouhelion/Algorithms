@@ -9,8 +9,30 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+vector<int> weirdAlgorithm(int number){
+  vector<int> list;
+  while(number!=1)
+  {
+    if(number%2==0){
+        //checking if even
+        number=number/2;
+        list.push_back(number);
+    }
+    else
+    {
+        //checking if odd
+        number=(number*3)+1;
+        list.push_back(number);
+    } 
+  }
+}
 
 int main()
 {
-    cout << "Hello World" <<endl;
+    vector<int> list;
+    int number;
+    cout << "enter a integer : " <<endl;
+    list=weirdAlgorithm(number);
+      for (int i = list.begin(); i != list.end(); ++i) 
+        cout << *i << " "; 
 }

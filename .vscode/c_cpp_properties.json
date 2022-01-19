@@ -11,18 +11,6 @@
                 "_UNICODE"
             ],
             "compilerPath": "D:/compiler/bin/g++.exe"
-        },
-        {
-            "name": "cpp",
-            "includePath": [
-                "${default}"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "D:\\compiler\\bin\\gcc.exe"
         }
     ],
     "version": 4
