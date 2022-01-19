@@ -11,24 +11,25 @@
 //3
 
 #include <iostream>
-#include <vector>
 #include<algorithm>
 using namespace std;
 int Repetitions(string DNA){
-  int n,max=0;
-  char rep;
-       for(int i=0;i<DNA.length();i++){
-           rep=DNA[i];
-          for(int j=i+1;j<DNA.length();j++){
-              if(DNA[i]==DNA[j])
-              {   
+  int n,max,best;
+  n=max=1;
+  best=max;
+       for(int i=1;i<DNA.length();i++){
+              if(DNA[i]==DNA[i-1])  
                   n++;
-              }
-             
-          }
-          
-       }  
-  return n;
+              else 
+                 { 
+                     n=1;
+                     if(n>max)
+                       best=n;
+        
+                 }
+            
+       } 
+  return best;
 }
 
 int main()
