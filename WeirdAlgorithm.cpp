@@ -33,6 +33,6 @@ int main()
     int number;
     cout << "enter a integer : " <<endl;
     list=weirdAlgorithm(number);
-      for (int i = list.begin(); i != list.end(); ++i) 
-        cout << *i << " "; 
+      for (int i = 0; i < list.size(); i++) 
+        cout << list[i] << " "; 
 }
