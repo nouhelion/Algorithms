@@ -12,11 +12,14 @@
 
 #include <iostream>
 #include <vector>
+#include<algorithm>
 using namespace std;
 int MissingNumber(int number,vector <int> list){
   int n;
-  for(int i = 1; n!=0; i++){
-       
+         sort(list.begin(), list.end());    
+  for(int i = 1; i<list.size()-1; i++){
+       if(list[i]+1!=list[i+1])
+        n=list[i]+1;
   }  
   return n;
 }
@@ -30,6 +33,6 @@ int main()
     for(int i = 0; i < size-1; i++){
         cin  >>number;
          list.push_back(number);
-    }    
+    }
     cout <<MissingNumber(size,list)<<endl;
 }
