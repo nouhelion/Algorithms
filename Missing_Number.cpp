@@ -10,27 +10,18 @@
 //Output:
 //4
 
-#include <iostream>
-#include <vector>
-#include<algorithm>
+#include<iostream>
 using namespace std;
-
-
-int main()
-{
-    int size;
-    long long number;
-    vector <long long> list;
-    cin  >> size;
-    for(int i = 0; i < size-1; i++){
-        cin  >>number;
-         list.push_back(number);
-    }
-    long long n;
-         sort(list.begin(), list.end());    
-  for(int i = 1; i<list.size()-1; i++){
-       if(list[i]+1!=list[i+1])
-        n=list[i]+1;
-  }  
-    cout <<n<<endl;
+int main() {
+	long long sum = 0, n, x;
+	cin >> n;
+	long long tot = ((n * (n+1))/2);
+	while (n > 1){
+		cin >> x;
+		sum += x;
+		n--;
+	}
+	cout << tot - sum;
+	return 0;
 }
+
