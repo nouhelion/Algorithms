@@ -9,8 +9,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-vector<int> weirdAlgorithm(int number){
-  vector<int> list;
+vector <int> weirdAlgorithm(int number){
+  vector <int> list;
+  list.push_back(number);
   while(number!=1)
   {
     if(number%2==0){
@@ -25,14 +26,16 @@ vector<int> weirdAlgorithm(int number){
         list.push_back(number);
     } 
   }
+  return list;
 }
 
 int main()
 {
-    vector<int> list;
+    vector <int> list;
     int number;
     cout << "enter a integer : " <<endl;
+    cin>>number;
     list=weirdAlgorithm(number);
       for (int i = 0; i < list.size(); i++) 
-        cout << list[i] << " "; 
+        cout << "->" << list[i] ; 
 }
