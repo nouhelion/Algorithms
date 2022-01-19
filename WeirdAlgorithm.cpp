@@ -35,7 +35,6 @@ int main()
     int number;
     cout << "enter a integer : " <<endl;
     cin>>number;
-    list=weirdAlgorithm(number);
-      for (int i = 0; i < list.size(); i++) 
-        cout << "->" << list[i] ; 
+      for (int i = 0; i < weirdAlgorithm(number).size(); i++) 
+        cout << "->" << weirdAlgorithm(number)[i] ; 
 }
