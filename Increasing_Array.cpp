@@ -7,18 +7,28 @@
 //Then, the second line contains n integers x1,x2,…,xn: the contents of the array.
 //Output
 //Print the minimum number of moves.
+//Input:
+//5
+//3 2 5 1 7
+//Output:
+//5
 
-#include < bits/stdc++.h >
+#include<iostream>
+#include<vector>
 using namespace std;
 int main()
 {
-    long long x, n;
-    set<long long> s;
+     int n;
     cin >> n;
+    vector<int> v(n);
     for (int i = 0; i < n; i++)
+        cin >> v[i];
+    long long ans = 0;
+    for (int i = 1; i < n; i++)
     {
-        cin >> s[i];
+        if (v[i] < v[i - 1])
+            ans += v[i - 1] - v[i], v[i] = v[i - 1];
     }
-
+    cout << ans;
     return 0;
 }
