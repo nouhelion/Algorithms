@@ -20,11 +20,17 @@ int main()
 	{
 		cout<<"NO SOLUTION";
 	}
-    vector<long long> v(n);
+    else 
+    {vector<long long> v(n);
     for (int i = 0; i < n; i++)
         cin >> v[i];
-   for(int i = 0; i < n; i++) {
-      
-   }
+        for(long long j =2; j>=1;j--){
+			for(long long i=j; i<=n; i+=2)
+			{
+				cout<<i<<" ";
+			}
+		}
+        }
+   
     return 0;
 }
